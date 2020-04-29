@@ -1,0 +1,34 @@
+<% if(formType==='noform'){ %>
+    <a href="/login">login</a>
+    <a href="/signup">signup</a>
+<% } %>
+
+<% if(formType==='login'){ %>
+<div class="login-form">
+    <form action="/login" method="post">
+        Email : <input type="text" name="email">
+        Password : <input type="text" name="password">
+        <button type="submit">Login</button>
+    </form>
+</div>
+<% } %>
+
+<% if(formType==='signup'){ %>
+    <div class="signup-form">
+        <form action="/signup" method="post">
+            Name : <input type="text" name="name">
+            Password : <input type="text" name="password">
+            Email : <input type="text" name="email">
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+<% } %>
+    
+
+
+
+<% if(isLoggedIn){ %>
+    <h1>Hi you are logged in</h1>
+    <a href="/logout">logout</a>
+<% } %>
+
